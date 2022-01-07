@@ -23,16 +23,16 @@ from selenium.webdriver import FirefoxOptions
 
 import time
 
+# can be made headless with opts.add_argument("--headless")
 opts = FirefoxOptions()
-#opts.add_argument("--headless")
 
 import winsound
 duration = 1000  # milliseconds
 freq = 440  # Hz
 
-#driver = webdriver.Firefox(options=opts)
-driver = webdriver.Firefox()
-#driver = webdriver.Firefox(executable_path=r'C:\geckodriver\geckodriver.exe')
+# optional:
+# add path with executable_path=r'C:\geckodriver\geckodriver.exe'
+driver = webdriver.Firefox(options=opts) 
 
 complete = False
 while complete == False:
